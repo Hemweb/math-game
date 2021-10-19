@@ -103,7 +103,8 @@ input:focus {
     background-color: rgb(55, 55, 255);
     border-radius: 5px;
     border: none;
-    box-shadow:0 3px 3px rgba(0, 0, 0, .6) ;
+    box-shadow:0 3px 3px rgba(0, 0, 0, .6);
+    font-weight: 500;
 }
 .main {
     display: flex;
