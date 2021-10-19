@@ -160,6 +160,7 @@ input:focus {
         font-size: 15px;
         padding: 7px 15px 7px;
         box-shadow:0 2px 2px rgba(0, 0, 0, .6) ;
+        outline: none;
     }
     .progress {
         margin: 30px 30px 2px;
