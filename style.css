@@ -138,3 +138,30 @@ input:focus {
 .progress {
     margin: 10px 70px 2px;
 }
+
+
+@media (max-width:500px) {
+    .main {
+        font-size: 15px;
+    }
+    .problem {
+    font-size: 50px;
+    }
+    .field {
+        margin: 10px 25px 20px;
+        font-size: 15px;
+        padding: 14px;
+        box-shadow:0 2px 2px rgba(0, 0, 0, .6) ;
+    }
+    .btn {
+        font-size: 15px;
+        padding: 7px 15px 7px;
+        box-shadow:0 2px 2px rgba(0, 0, 0, .6) ;
+    }
+    .progress {
+        margin: 30px 30px 2px;
+    }
+    .box {
+        height: 55px;
+    }
+}
