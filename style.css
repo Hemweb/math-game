@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+.boxes {
+    display: flex;
+    width: 100%;
+}
+.progress {
+    border-right: none;
+    border: 1px solid grey;
+    position: relative;
+}
+
+.progress-inner {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 100%;
+    background-color: limegreen;
+    /* background-image: linear-gradient(to right, yellow,lime); */
+    opacity: .6;
+    transform: scaleX(0);
+    transform-origin: center left;
+    transition: transform .4s ease-out;
+}
+.box {
+    height: 80px;
+    border-right: 1px solid grey;
+    flex: 1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .33s ease-out;
+    transform: scale(1.2);
+    color: white;
+}
+
+body.overlay-is-open .overlay {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+body.overlay-is-open .main {
+    filter: blur(2.4px);
+}
+
+@keyframes showError {
+    50% {
+        color: red;
+        transform: scale(1.2);
+    }
+    100% {
+        color: lime;
+        transform: scale(1);
+    }
+}
+.animate-wrong {
+    animation: .33s showError;
+}
+.problem {
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.field {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow:0 3px 3px rgba(0, 0, 0, .6) ;
+    padding: 16px;
+    font-size: 20px;
+
+}
+input:focus {
+    border: none;
+    /* background-color: rgba(0, 0, 0, 0.11); */
+    outline: 2px solid rgb(55, 55, 255);
+
+}
+.btn {
+    font-size: 23px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 25px 10px;
+    background-color: rgb(55, 55, 255);
+    border-radius: 5px;
+    border: none;
+    box-shadow:0 3px 3px rgba(0, 0, 0, .6) ;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 19px;
+}
+.main p span {
+    color: rgb(255, 255, 255);
+    background-color: rgb(10, 10, 10);
+    
+    padding: 2px 7px 2px;
+    border-radius: 3px;
+    box-shadow:0 1px 1px rgba(0, 0, 0, .6) ;
+}
+.overlay-inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 19px;
+}
+.end-msg {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.start-btn {
+    text-transform: capitalize;
+}
+.progress {
+    margin: 10px 70px 2px;
+}
